@@ -1,13 +1,15 @@
 import React from 'react';
 import { Stack, Box } from '@mui/material';
 import './Videos.css';
+import spinner from '../../assets/spinner.gif'
 
 const Videos = ({videos, name}) => {
 
-  console.log(process.env);
-  if (!videos.length) return 'Retrieving videos...';
+  if (!videos.length) return <img src={spinner}></img>;
+ 
 
   return (
+    
     <Box sx={{ marginTop: { lg: '60px', xs: '20px' } }} p="19px">
       <span className='videos-header'>Additional Resources:</span> 
     <Stack sx={{ flexDirection: { lg: 'row' },

@@ -5,8 +5,7 @@ import './Favorites.css'
 
 
 const Favorites = ({ listFavs, setListFavs }) => {
-  <h1>Favorite Workouts</h1>
-
+  
   const handleClickFavButton = () => {
     const emptyList = [];
     localStorage.setItem('favoriteExercises', JSON.stringify(emptyList));
