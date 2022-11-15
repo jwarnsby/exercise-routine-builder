@@ -1,0 +1,46 @@
+.videos-header {
+  margin-bottom: 33px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.movie-title {
+  font-weight: 400;
+  color: lightblue;
+  text-align: center;
+}
+
+.source {
+  text-align: center;
+  font-size: 15px;
+  color: lightblue;
+}
+
+.video-styling {
+  width: 320px;
+  height: 300px;
+}
+
+.movie-img-styling {
+  max-width: 360px;
+  max-height: 202px;
+  border-radius: 2%;
+}
+
+@media screen and (min-width: 601px) {
+  .videos-header {
+    font-size: 35px;
+  }
+  .movie-title{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .videos-header {
+    font-size: 20px;
+  }
+  .movie-title {
+    font-size: 15px;
+  }
+}
