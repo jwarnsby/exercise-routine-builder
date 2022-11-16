@@ -8,7 +8,25 @@ import './ExerciseInfo.css';
 const ExerciseInfo = ({ exercise, listFavs, setListFavs }) => {
   const isAlreadyFavorite = listFavs ? listFavs.includes(exercise) : [] ;
   
-  const addingFavs = () => {
+  const addingFavs = async () => {
+    // const { _id, __v, ...rest } = exercise;
+    // const data = await fetch('http://localhost:4400/favs', {
+    //   method: 'POST',
+    //   mode: 'cors',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(rest),
+    // });
+
+    // const newFav = await data.json();
+
+    // const list = listFavs.push(newFav);
+
+    // setListFavs(list);
+
+
+
     const newList = [...listFavs]
     if (isAlreadyFavorite) {
       const index = newList.indexOf(exercise);
@@ -34,10 +52,8 @@ const ExerciseInfo = ({ exercise, listFavs, setListFavs }) => {
         <div className="btn-bodypart">Body Part:  {exercise.bodyPart}</div>
         <div className="btn-target">Muscle Targeted: {exercise.target}</div>
         <button onClick={addingFavs} className={isAlreadyFavorite ? 'favButton' : 'greenButton'}>
-        {isAlreadyFavorite
-           ? 'Remove Exercise' 
-           : 'Add Exercise to Routine'}
-           </button>
+         {isAlreadyFavorite ? 'Remove Exercise' : 'Add Exercise to Routine'}
+        </button>
       </Stack>
     </div>
   );

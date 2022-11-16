@@ -5,8 +5,7 @@ import spinner from '../../assets/spinner.gif'
 
 const Videos = ({videos, name}) => {
 
-  if (!videos.length) return <img src={spinner}></img>;
- 
+  if (!videos.length) return <img src={spinner} alt="spin"></img>;
 
   return (
     

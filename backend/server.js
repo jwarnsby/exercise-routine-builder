@@ -2,10 +2,8 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const exerciseRoutes = require('./routes/routes');
+// const favRoutes = require('./routes/favorite-routes.js');
 const cors = require('cors');
-
-
-
 
 const app = express();
 
@@ -13,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/', exerciseRoutes);
+// app.use('/favs', favRoutes);
 app.use((req, res, next) => {
   console.log(req.path, req.method)
   next()
